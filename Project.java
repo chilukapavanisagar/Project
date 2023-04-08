@@ -1,3 +1,4 @@
+package project;
 import java.util.Iterator;
 import java.util.Set;
 import org.openqa.selenium.By;
@@ -5,11 +6,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-public class Project {
+public class Project{
 public static void main(String[] args) throws InterruptedException {
 //TODO Auto-generated method stub 
-System.setProperty("webdriver.chrome.driver","C:\\Users\\chira\\Downloads\\chromedrive
-r_win32\\chromedriver.exe");
+System.setProperty("webdriver.chrome.driver","C:\\Users\\Pavani\\Downloads\\chromedriver_win32\\chromedriver.exe");
 WebDriver ob=new ChromeDriver();
 ob.get("https://google.com");
 ob.manage().window().maximize();
@@ -18,8 +18,7 @@ search.sendKeys("tsspdcl");
 search.sendKeys(Keys.ENTER);
 WebElement link=ob.findElement(By.xpath("(//a[text()='Pay Your Bill'])[1]"));
 link.click();
-WebElement billdesk=ob.findElement(By.xpath("/html/body/section/div/div[2] 
-/div/div[3]/figure/a/img"));
+WebElement billdesk=ob.findElement(By.xpath("/html/body/section/div/div[2]/div/div[3]/figure/a/img"));
 billdesk.click();
 Set<String> win=ob.getWindowHandles();
 Iterator<String> it=win.iterator();
